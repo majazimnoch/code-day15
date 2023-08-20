@@ -13,7 +13,9 @@ const Nav = () => {
                 </AboveBarTextBox>
                 <AboveBarFlagBox>
                   <FlagDiv>
-                    <img></img>
+                    <CountryFlag
+                        alt="United States"
+                        src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"/>
                     <p>English</p>
                   </FlagDiv>
                   <CurrencyDiv>
@@ -73,12 +75,16 @@ gap: 1rem;
 const FlagDiv = styled.div`
 display: flex;
 flex-direction: row;
+align-items: center;
 gap: 1rem;
+border: 1px red solid;
+`
+const CountryFlag = styled.img`
+height:20px;
 `
 
 const CurrencyDiv = styled.div`
 display: flex;
-
 `
 
 const HLogo = styled.h1`
@@ -90,6 +96,7 @@ text-transform: uppercase;
 const Bar = styled.nav`
 display: flex;
 flex-direction: row;
+align-items: center;
 justify-content: space-between;
 border: 1px red solid;
 `

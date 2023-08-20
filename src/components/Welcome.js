@@ -1,11 +1,9 @@
 import React from "react";
+import Header from "./Header";
 
 const Welcome = () => {
     return (
-       <article>
-         <h1>Welcome</h1>
-         <p>...</p>
-       </article>
+       <Header />
     )
 }
 
