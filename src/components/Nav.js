@@ -7,9 +7,10 @@ const Nav = () => {
         <>
             <AboveBar>
                 <AboveBarTextBox>
-                    <p>Have any questions</p>
-                    <p>example@gmail.com</p>
-                    <p>+1-202-555-0174</p>
+                    <Pdesktop>Have any questions?</Pdesktop>
+                    <Pdesktop>example@gmail.com</Pdesktop>
+                    <Pdesktop>+1-202-555-0174</Pdesktop>
+                    <Pmobile>example@gmail.com</Pmobile>
                 </AboveBarTextBox>
                 <AboveBarFlagBox>
                   <FlagDiv>
@@ -46,7 +47,7 @@ const Nav = () => {
                         <StyledNavLink to="/blog">Blog</StyledNavLink>
                     </SingleLinkNavbar>
                 </ListMenu>
-                <button>Join Now</button>
+                <ButtonSquare>Join Now</ButtonSquare>
             </Bar>
         </>
     )
@@ -58,13 +59,38 @@ const AboveBar = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+align-items: center;
+gap: 1rem;
+
+@media (min-width: 1024px) {
+display: flex;
+justify-content: space-between;
 gap: 2rem;
+border: 1px red solid; 
+}
 `
 
 const AboveBarTextBox = styled.div`
 display: flex;
+gap: 2rem;
+
+@media (min-width: 1024px) {
+display: flex;
 flex-direction: row;
 gap: 2rem;
+}
+`
+const Pmobile = styled.p`
+font-size: 12px;
+@media (min-width: 668px) {
+display: none;
+}
+`
+const Pdesktop = styled.p`
+font-size: 12px;
+@media (max-width: 667px) {
+display: none;
+}
 `
 
 const AboveBarFlagBox = styled.div`
@@ -77,7 +103,6 @@ display: flex;
 flex-direction: row;
 align-items: center;
 gap: 1rem;
-border: 1px red solid;
 `
 const CountryFlag = styled.img`
 height:20px;
@@ -94,11 +119,10 @@ text-transform: uppercase;
 `
 
 const Bar = styled.nav`
-display: flex;
+display: none;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-border: 1px red solid;
 `
 
 const ListMenu = styled.ul`
@@ -122,4 +146,24 @@ text-decoration: underline;
 color: beige;
 list-style-type: none;
 }
+`
+const ButtonSquare = styled.button`
+background-image: linear-gradient(to right, #B966E7, #585CED, #B966E7 );
+margin: 10px;
+padding: 15px 45px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;            
+box-shadow: 0 0 20px ;
+border-radius: 10px;
+display: block;
+border: none;
+
+&:hover {
+background-position: right center; 
+color: #fff;
+text-decoration: none;
+}    
 `

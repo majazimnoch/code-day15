@@ -12,10 +12,10 @@ const Header = () => {
             <h2>Innovative Language Academic Platform for Your Career</h2>
             <ImageAndTextBox>
                 <ImageDiv>
-                    <StyledImgFace src={imageface2} alt="Woman" />
+                    <StyledImgFace src={imageface1} alt="Woman" />
                     <StyledImgFace src={imageface3} alt="Man" />
                     <StyledImgFace src={imageface2} alt="Woman" />
-                </ImageDiv>
+                </ImageDiv> 
                 <div>
                     <p>Join Over 3000+ Students</p>
                     <p> Have new ideas every week</p>
@@ -57,17 +57,17 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-margin-left:.8rem;
+margin-left:.8rem; 
 `
 const StyledImgFace = styled.img`
- width: 50px;
+  width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 3px beige solid;
   margin-left: -.8rem;
   display: block;
+  background-size: cover
 `
-// https://stackoverflow.com/questions/14993875/css3-circular-image-not-working //
 
 const HeadRight = styled.div`
 grid-area: 1 / 2 / 2 / 3; 
