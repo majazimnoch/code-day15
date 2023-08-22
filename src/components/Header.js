@@ -45,7 +45,6 @@ grid-row-gap: 0px;
 
 const HeadLeft = styled.div`
 grid-area: 1 / 1 / 2 / 2;
-border: 1px red solid;
 `
 const ImageAndTextBox = styled.div`
 display: flex;
@@ -71,5 +70,4 @@ const StyledImgFace = styled.img`
 
 const HeadRight = styled.div`
 grid-area: 1 / 2 / 2 / 3; 
-border: 1px red solid;
 `
